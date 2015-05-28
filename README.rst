@@ -16,14 +16,14 @@ In urls.py: change your regex patterns to flask-styled paths
 
     from django.conf.urls import include
     from django_fsu import url
-    
+
     from . import views
-    
+
     urlpatterns = [
         url('login', views.login),
         url('user/<username>', views.profile),
         url('article/<int:pk>', views.article),
-        url('admin/', include('admin.sites.urls'),
+        url('projects/', include('projects.urls'),
     ]
 
 ------------
