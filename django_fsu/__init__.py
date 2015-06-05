@@ -12,7 +12,7 @@ import itertools
 from django.conf.urls import url as django_url
 
 
-__version__ = '0.1'
+__version__ = '0.1.1'
 
 
 quote = re.compile(r'\<([^<>]+)\>')

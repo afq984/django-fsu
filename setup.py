@@ -1,11 +1,9 @@
 from setuptools import setup
 
-import django_fsu
-
 
 setup(
     name='django-fsu',
-    version=django_fsu.__version__,
+    version='0.1.1',
     packages=['django_fsu'],
     include_package_data=True,
     license='BSD License',
