@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='django-fsu',
-    version='0.1.1',
+    version='0.1.2',
     packages=['django_fsu'],
     include_package_data=True,
     license='BSD License',

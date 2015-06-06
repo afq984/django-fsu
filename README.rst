@@ -26,6 +26,9 @@ In urls.py: change your regex patterns to flask-styled paths
         url('projects/', include('projects.urls'),
     ]
 
+To see how individual functions work,
+see the docstrings or type ``help('django_fsu')`` in the interactive prompt.
+
 ------------
 Installation
 ------------

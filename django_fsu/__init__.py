@@ -12,7 +12,7 @@ import itertools
 from django.conf.urls import url as django_url
 
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 
 quote = re.compile(r'\<([^<>]+)\>')
@@ -52,7 +52,7 @@ def iroute(path):
 def route(path):
     '''
     convert a flask-style url to django's regex,
-    without the starting '^' or ending '/'.
+    without the starting '^' or ending '$'.
     '''
     return ''.join(iroute(path))
 
