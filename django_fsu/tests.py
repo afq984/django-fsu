@@ -1,5 +1,5 @@
 import unittest
-
+import re
 import django_fsu
 
 
@@ -29,6 +29,24 @@ class PatternTest(unittest.TestCase):
             r'(?P<username>[^\/]+)',
             django_fsu.make_regex('username')
         )
+
+    def _match(self, pat, tar):
+        return re.match(django_fsu.route(pat), tar)
+
+    def testRegexMatchText(self):
+        self.assertTrue(self._match('<my_text>/', 'a string/'))
+
+    def testRegexMatchInt(self):
+        self.assertTrue(self._match('<int:my_int>/', '234532/'))
+
+    def testRegexMatchFloat(self):
+        self.assertTrue(self._match('<float:my_decimal>/', '234.35/'))
+
+    def testRegexDoesntMatchFloatForInt(self):
+        self.assertFalse(self._match('<int:my_int>/', '34.332/'))
+
+    def testRegexMatchIntForFloat(self):
+        self.assertTrue(self._match('<float:my_float>/', '2342/'))
 
     # TODO: Test Full Regex
 
