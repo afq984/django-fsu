@@ -38,11 +38,11 @@ Variable parts are passed to the view function as keyword arguments. In the abov
 
 Currently supported formats codes are:
 
-    * string (the default, accepts string without a slash)
-    * int
-    * float
-    * uuid
-    * path (accepts any string)
+* ``string`` (the default, accepts string without a slash)
+* ``int``
+* ``float``
+* ``uuid``
+* ``path`` (accepts any string)
 
 Please note that ``int`` and ``float`` variables are still passed to the view function as a string.
 
